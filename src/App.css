@@ -3,7 +3,7 @@
 /* Layout */
 
 .container-large {
-  max-width: 960px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -24,6 +24,7 @@ nav ul li:last-child {
 
 main {
   text-align: center;
+  font-size: 18px;
 }
 
 .jumbo {
@@ -33,12 +34,54 @@ main {
   text-align: center;
   letter-spacing: -0.03em;
 }
-.subtitle {
+.content-wrapper {
   margin: 1rem auto;
-  line-height: 22.82px;
+  line-height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
 }
-.subtitle span {
+.content-wrapper span {
   font-weight: 700;
+}
+
+.content-wrapper a:link,
+a:visited {
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.buttons-wrapper {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cta {
+  background: var(--black);
+  color: var(--white);
+  border: none;
+}
+
+.outlined {
+  background: var(--white-2);
+  color: var(--black);
+  border: 1px solid var(--black);
 }
 
 @media only screen and (min-width: 768px) {
@@ -46,7 +89,18 @@ main {
     margin-top: 28;
     font-size: 117px;
   }
-  .subtitle {
+
+  .content-wrapper {
     max-width: 60%;
+  }
+
+  .buttons-wrapper {
+    flex-direction: row;
+  }
+
+  button,
+  .cta {
+    width: fit-content;
+    margin-top: 0;
   }
 }
