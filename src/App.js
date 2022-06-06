@@ -1,11 +1,13 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 
+import Title from "./Components/Title";
+
 function App() {
   return (
     <div className="container-large">
       <main>
-        <div className="jumbo">Andreu Salles</div>
+        <Title></Title>
         <div className="content-wrapper">
           <div>
             Hi, I am a <span>Frontend Developer</span> and{" "}
